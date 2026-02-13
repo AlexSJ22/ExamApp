@@ -1,5 +1,5 @@
 services:
-  database:
+  mysql:
     build:
       dockerfile: database/database.Dockerfile
     container_name: databaseContainer
@@ -17,7 +17,7 @@ services:
     ports:
       - '8080:80'
     depends_on:
-      - database
+      - mysql
     networks:
       - examenInternal
 
